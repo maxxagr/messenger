@@ -1,0 +1,179 @@
+<resources>
+    <!-- Light application theme. -->
+    <style name="LightTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dx_white</item>
+        <item name="colorPrimaryDark">@color/dx_accent</item>
+        <item name="android:textColorSecondary">@color/dx_dark</item>
+        <item name="android:textColorPrimary">@color/dx_dark</item>
+        <item name="android:textColor">@color/dx_dark</item>
+        <item name="android:textColorHint">@color/dx_dark</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="colorAccent">@color/dx_night_950</item>
+        <item name="android:textColorLink">@color/dx_dark</item>
+        <item name="android:windowBackground">@color/dx_white</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:itemBackground">@color/dx_white</item>
+        <item name="placeholderTextColor">@color/dx_dark</item>
+        <item name="android:textColorHighlight">@color/green_tor</item>
+        <item name="android:textColorTertiary">@color/dx_dark</item>
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+        <item name="colorControlNormal">@color/dx_dark</item>
+        <item name="colorControlActivated">@color/dx_dark</item>
+        <item name="colorControlHighlight">@color/dx_dark</item>
+        <item name="android:actionModeStyle">@style/Theme.App</item>
+        <item name="actionModeBackground">@color/dx_night_950</item>
+        <item name="switchTextAppearance">@color/dx_night_950</item>
+        <item name="android:textColorAlertDialogListItem">@color/dx_white</item>
+        <item name="android:editTextColor">#000000</item>
+        <item name="iconTint">#000000</item>
+        <item name="android:actionMenuTextColor">#000000</item>
+        <item name="navigationIconTint">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dx_dark</item>
+        <item name="colorPrimaryDark">@color/dx_dark</item>
+        <item name="android:textColorSecondary">@color/dx_white</item>
+        <item name="android:textColorPrimary">@color/dx_white</item>
+        <item name="android:textColor">@color/dx_white</item>
+        <item name="android:textColorHint">@color/dx_white</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="colorAccent">@color/dx_accent</item>
+        <item name="android:textColorLink">@color/dx_white</item>
+        <item name="android:windowBackground">@color/dx_background</item>
+        <item name="android:navigationBarColor">@color/dx_dark</item>
+        <item name="android:itemBackground">@color/dx_dark</item>
+        <item name="placeholderTextColor">@color/dx_white</item>
+        <item name="android:textColorHighlight">@color/green_tor</item>
+        <item name="android:textColorTertiary">@color/dx_white</item>
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+        <item name="colorControlNormal">@color/dx_white</item>
+        <item name="colorControlActivated">@color/dx_white</item>
+        <item name="colorControlHighlight">@color/dx_white</item>
+        <item name="android:actionModeStyle">@style/Theme.App</item>
+        <item name="actionModeBackground">@color/dx_night_950</item>
+        <item name="switchStyle">@style/SwitchWhiteText</item>
+        <item name="android:textColorAlertDialogListItem">@color/dx_white</item>
+        <item name="editTextColor">@color/dx_white</item>
+        <item name="android:editTextColor">@color/dx_white</item>
+        <item name="iconTint">@color/dx_white</item>
+        <item name="android:actionMenuTextColor">@color/dx_white</item>
+        <item name="navigationIconTint">@color/dx_white</item>
+    </style>
+
+    <style name="SwitchWhiteText" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textColor">@color/dx_white</item>
+        <item name="backgroundColor">@color/transparent</item>
+    </style>
+
+    <style name="Widget.App.ActionMode" parent="Widget.AppCompat.ActionMode">
+        <item name="titleTextStyle">?attr/textAppearanceHeadline6</item>
+        <item name="subtitleTextStyle">?attr/textAppearanceSubtitle1</item>
+        <item name="background">@color/material_grey_900</item>
+        <item name="backgroundColor">@color/material_grey_900</item>
+        <item name="colorOnBackground">@color/material_grey_900</item>
+        <item name="actionModeBackground">@drawable/app_bar_background</item>
+        <item name="android:background">?android:attr/actionModeBackground</item>
+        <item name="android:backgroundSplit">?android:attr/actionModeSplitBackground</item>
+        <item name="android:height">?android:attr/actionBarSize</item>
+<!--        <item name="android:titleTextStyle">@android:style/TextAppearance.Widget.ActionMode.Title</item>-->
+<!--        <item name="android:subtitleTextStyle">@android:style/TextAppearance.Widget.ActionMode.Subtitle</item>-->
+    </style>
+
+    <style name= "RobotoTextViewStyle" parent= "android:Widget.TextView" >
+        <item name= "android:fontFamily" > sans-serif-light </item>
+    </style>
+
+    <style name="ThemeOverlay.App.NavigationView" parent="">
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.App.Subtitle2</item>
+    </style>
+
+    <style name="TextAppearance.App.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">monospace</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+<!--    <style name="splashScreenTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">-->
+<!--    </style>-->
+
+    <style name="ButtonTheme" parent="Theme.AppCompat.DayNight">
+        <!-- A strange hack needed only to override button color on all API levels -->
+        <item name="colorAccent">@color/green_tor</item>
+    </style>
+    <style name="DXButton" parent="Widget.AppCompat.Button.Colored">
+<!--        <item name="android:theme">@style/ButtonTheme</item>-->
+        <item name="android:background">@drawable/button_ripple</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:padding">@dimen/margin_large</item>
+        <item name="android:textColor">@color/dx_button_text</item>
+    </style>
+
+    <style name="DXSendButton" parent="Widget.AppCompat.Button.Colored">
+<!--        <item name="colorAccent">@color/dx_night_940</item>-->
+<!--        <item name="android:layout_width">match_parent</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:textSize">@dimen/text_size_medium</item>-->
+<!--        <item name="android:padding">@dimen/margin_large</item>-->
+<!--        <item name="android:textColor">@color/dx_button_text</item>-->
+    </style>
+
+    <style name="AppAlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/dx_white</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/dx_white</item>
+        <!-- Used for the background -->
+<!--        <item name="android:background">@color/dx_night_940</item>-->
+        <item name="android:windowTitleStyle">@android:style/TextAppearance.Material.WindowTitle</item>
+        <item name="android:windowBackground">@drawable/background_dialog</item>
+        <item name="android:textColorSecondary">@color/dx_white</item>
+        <item name="textColorAlertDialogListItem">@color/dx_white</item>
+        <item name="android:textColor">@color/dx_white</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="OverlayAlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/dx_white</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/dx_white</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/green_tor</item>
+
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/dx_button_text</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/dx_button_text</item>
+    </style>
+
+    <style name="AppTheme.TransparentFullscreen" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

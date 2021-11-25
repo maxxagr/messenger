@@ -1,0 +1,16 @@
+<resources>
+
+	<!-- Default screen margins, per the Android Design guidelines. -->
+	<dimen name="margin_activity_horizontal">16dp</dimen>
+	<dimen name="margin_activity_vertical">16dp</dimen>
+
+    <dimen name="margin_large">16dp</dimen>
+
+    <!-- v2 dimens -->
+    <dimen name="text_size_medium">16sp</dimen>
+	<dimen name="text_size_large">22sp</dimen>
+    <dimen name="ic_clear_margin">16dp</dimen>
+    <dimen name="mediaalbumviewer_image_height_when_empty">240dp</dimen>
+    <dimen name="textsize24">24dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dx.anonymousmessenger">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" /> <!-- <uses-feature -->
+    <!-- android:name="android.software.leanback" -->
+    <!-- android:required="true" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        android:required="false" />
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        android:required="false" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+
+    <uses-permission-sdk-23
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+        android:required="false" />
+    <uses-permission-sdk-23 android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".DxApplication"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".ui.view.single_activity.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+        <activity android:name=".ui.view.single_activity.CrashActivity" />
+        <activity
+            android:name=".ui.view.log.LogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+        <activity android:name=".ui.view.single_activity.SimpleScannerActivity" />
+        <activity
+            android:name=".ui.view.notepad.NotepadActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+        <activity android:name=".ui.view.single_activity.FileViewerActivity" />
+        <activity android:name=".ui.view.tips.TipsActivity" />
+        <activity android:name=".ui.view.single_activity.AboutActivity" />
+        <activity android:name=".ui.view.single_activity.ContactProfileActivity" />
+        <activity android:name=".ui.view.single_activity.LicenseActivity" />
+        <activity android:name=".ui.view.single_activity.MyProfileActivity" />
+        <activity
+            android:name=".ui.view.single_activity.PictureViewerActivity"
+            android:configChanges="orientation|navigation"
+            android:duration="@android:integer/config_longAnimTime"
+            android:theme="@style/AppTheme.TransparentFullscreen" />
+        <activity android:name=".ui.view.call.RingingActivity" />
+        <activity android:name=".ui.view.call.CallActivity" />
+        <activity
+            android:name=".ui.view.single_activity.AddContactActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+        <activity android:name=".ui.view.single_activity.VerifyIdentityActivity" />
+        <activity android:name=".ui.view.single_activity.MyIdentityActivity" />
+        <activity android:name=".ui.view.setup.SetupInProcess" />
+        <activity
+            android:name=".ui.view.message_list.MessageListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation"
+            android:duration="@android:integer/config_longAnimTime"/>
+        <activity
+            android:name=".ui.view.app.AppActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+        <activity
+            android:name=".ui.view.setup.CreateUserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
+
+        <activity
+            android:name=".ui.view.MainActivity"
+            android:label="@string/anonymous_messenger"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:label="Securoo"
+            android:name=".ui.view.Securoo"
+            android:enabled="false"
+            android:targetActivity=".ui.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:label="AM"
+            android:name=".ui.view.AM"
+            android:enabled="false"
+            android:targetActivity=".ui.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <receiver android:name=".receiver.NotificationHiderReceiver" />
+        <receiver
+            android:name=".receiver.StartMyServiceAtBootReceiver"
+            android:exported="false"
+            android:label="StartMyServiceAtBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.BootReminderService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".media.AudioRecordingService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.DxService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".call.CallService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".call.DxCallService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="@string/file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

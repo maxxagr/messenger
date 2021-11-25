@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    <TextView-->
+<!--        android:id="@+id/txt_identity_key"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--        android:typeface="monospace"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="4dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:padding="4dp"-->
+<!--        android:text="Hold on!"-->
+<!--        android:textSize="60px"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/top_bar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/txt_identity_key"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center|start"
+            android:padding="15dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="monospace" />
+
+    </LinearLayout>
+</ScrollView>

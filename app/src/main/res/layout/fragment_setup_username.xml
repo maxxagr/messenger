@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dx.anonymousmessenger.ui.view.app.PasswordEntryFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_activity_horizontal"
+        android:paddingLeft="@dimen/margin_activity_horizontal"
+        android:paddingTop="@dimen/margin_activity_vertical"
+        android:paddingEnd="@dimen/margin_activity_horizontal"
+        android:paddingRight="@dimen/margin_activity_horizontal"
+        android:paddingBottom="@dimen/margin_activity_vertical">
+
+        <Button
+            android:id="@+id/next"
+            style="@style/DXButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/next_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fab_nickname_help"
+            tools:enabled="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_layout_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nickname"
+                android:imeOptions="flagNoPersonalizedLearning|actionDone"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="176dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/nickname_help"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_nickname_help"
+            app:layout_constraintStart_toEndOf="@+id/fab_nickname_help"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_caption" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_nickname_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_help_24"
+            app:fabSize="mini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_layout_caption"
+            android:focusable="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

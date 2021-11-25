@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.dx.anonymousmessenger"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 46
+        versionName "0.8.8"
+        setProperty("archivesBaseName", applicationId + "-v" + versionCode + "(" + versionName + ")")
+        ndk{
+            abiFilters 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+        }
+        resValue "string", "file_provider", applicationId+".fileprovider"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable false
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'org/eclipse/jetty/http/encoding.properties'
+    }
+
+}
+
+repositories {
+//    maven { url "https://raw.githubusercontent.com/guardianproject/gpmaven/master" }
+    google()
+    jcenter()
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar','*.so'])
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+//    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.google.protobuf:protobuf-java:3.9.2' //later versions min api 26+
+
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.3@aar'
+    implementation "androidx.sqlite:sqlite:2.1.0"
+
+    implementation 'com.alexvasilkov:gesture-views:2.8.2'
+    implementation 'com.github.omadahealth:swipy:1.2.3@aar'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

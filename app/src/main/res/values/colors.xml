@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dx_accent">#130025</color>
+    <color name="dx_dark">#0D0014</color>
+    <color name="dx_background">#07000B</color>
+    <color name="dx_night_950">#0e171f</color>
+    <color name="dx_night_940">#210030</color>
+    <color name="dx_night_940_glass">#60260037</color>
+    <color name="dx_received">#2D0025</color>
+    <color name="dx_night_700">#333A41</color>
+    <color name="dx_alert">#512DA8</color>
+    <color name="green_tor">#68B030</color>
+    <color name="black_opacity_75">#C4000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_background">@color/dx_night_940</color>
+    <color name="white_opacity_05">#0CFFFFFF</color>
+
+    <color name="dx_button_background_color">@color/dx_night_700</color>
+    <color name="dx_button_text">#ffffff</color>
+    <color name="dx_white">#ffffff</color>
+    <color name="red_500">#F44336</color>
+    <color name="startGradientColor">#130025</color>
+    <color name="endGradientColor">#0A0025</color>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+
+</resources>
